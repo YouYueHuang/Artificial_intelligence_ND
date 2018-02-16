@@ -78,3 +78,77 @@ Contact ai-support@udacity.com if you don't have access to the forums or Slack t
 **Note:** The `pygame` library is required to visualize your solution -- however, the `pygame` module can be troublesome to install and configure. It should be installed by default with the AIND conda environment, but it is not reliable across all operating systems or versions. Please refer to the pygame documentation [here](http://www.pygame.org/download.shtml), or discuss among your peers in the slack group or discussion forum if you need help.
 
 Running `python solution.py` will automatically attempt to visualize your solution, but you mustuse the provided `assign_value` function (defined in `utils.py`) to track the puzzle solution progress for reconstruction during visuzalization.
+
+## Running unittest with typical test directory structure
+
+To run the `unittest`, we can use command line interface which will add the directory to the `sys.path`, so you don't have to (done in the `TestLoader` class).
+
+Directory structure EX 1:
+```
+new_project
+├── Suduku_module.py
+└── test_Suduku_module.py
+```
+You can just run:
+
+```bash
+$ cd new_project
+$ python -m unittest test_Suduku_module
+```
+
+Directory structure EX 2:
+```
+new_project
+├── Suduku_module
+│   ├── __init__.py         # make it a package
+│   └── Suduku_module.py
+└── test
+    ├── __init__.py         # also make test a package
+    └── test_Suduku_module.py
+```
+
+And in the test modules inside the test package, you can import the Suduku_module package and its modules as usual:
+
+```python
+# import the package
+import Suduku_module
+
+# import the Suduku_module module
+from Suduku_module import Suduku_module
+
+# or an object inside the Suduku_module module
+from Suduku_module.Suduku_module import my_object
+```
+
+Running a single test module:
+
+To run a single test module, in this case `Suduku_module.py`:
+
+```bash
+$ cd new_project
+$ python -m unittest test.Suduku_module
+```
+Just reference the test module the same way you import it.
+
+Running a single test case or test method:
+
+Also you can run a single TestCase or a single test method:
+
+```bash
+$ python -m unittest test.Suduku_module.SudukuTestCase
+$ python -m unittest test.Suduku_module.SudukuTestCase.test_method
+```
+Running all tests:
+
+You can also use `unittest discovery` which will discover and run all the tests for you, they must be modules or packages named `test*.py` (can be changed with the `-p`, `--pattern` flag):
+
+```python
+$ cd new_project
+$ python -m unittest discover
+```
+This will run all the `test*.py` modules inside the `test` package.
+
+##　Exporting the directory tree of a folder in Windows
+
+1. To open the Command Prompt directly at the folder you are interested in, type `cmd` in the address bar of Windows File Explorer and press Enter , 
+2. type: `tree /a /f > output.txt`

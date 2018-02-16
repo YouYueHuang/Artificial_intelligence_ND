@@ -1,0 +1,34 @@
+Folder PATH listing for volume data1
+Volume serial number is FFFFFFB9 900A:BDA0
+D:.
+|   main_test.ipynb
+|   PySudoku.py
+|   README.md
+|   solution.py
+|   utils.py
+|   
++---.ipynb_checkpoints
+|       main_test-checkpoint.ipynb
+|       
++---.udacity-pa
+|       projects.py
+|       
++---images
+|       sudoku-board-bare.jpg
+|       
++---objects
+|       GameResources.py
+|       SudokuSquare.py
+|           
++---tests
+|   |   test_solution.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           test_solution.cpython-35.pyc
+|           __init__.cpython-35.pyc
+|           
+\---__pycache__
+        solution.cpython-35.pyc
+        utils.cpython-35.pyc
+        

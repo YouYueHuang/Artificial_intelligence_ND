@@ -10,6 +10,10 @@ history = {}  # history must be declared here so that it exists in the assign_va
 
 def extract_units(unitlist, boxes):
     """Initialize a mapping from box names to the units that the boxes belong to
+    Element example:
+    row_units[0] = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+    column_units[0] = ['A1', 'B1', 'C1', 'D1', 'E1', 'F1', 'G1', 'H1', 'I1']
+    square_units[0] = ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'C1', 'C2', 'C3']
 
     Parameters
     ----------
@@ -24,6 +28,8 @@ def extract_units(unitlist, boxes):
     dict
         a dictionary with a key for each box (string) whose value is a list
         containing the units that the box belongs to (i.e., the "member units")
+        EX: {"BOX1": [diag_unit_1, row_unit_1, col_unit_1, box_unit_1]
+            ,"BOX2": [diag_unit_2, row_unit_2, col_unit_2, box_unit_2]}
     """
     # the value for keys that aren't in the dictionary are initialized as an empty list
     units = defaultdict(list)
