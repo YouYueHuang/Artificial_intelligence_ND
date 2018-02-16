@@ -2,14 +2,12 @@
 from utils import *
 
 
+left_diagonal_units = [["{}{}".format(r, c) for r, c in zip(rows, cols)]]
+right_diagonal_units = [["{}{}".format(r, c) for r, c in zip(rows, cols[::-1])]]
 row_units = [cross(r, cols) for r in rows]
 column_units = [cross(rows, c) for c in cols]
 square_units = [cross(rs, cs) for rs in ('ABC','DEF','GHI') for cs in ('123','456','789')]
-unitlist = row_units + column_units + square_units
-
-# TODO: Update the unit list to add the new diagonal units
-unitlist = unitlist
-
+unitlist = row_units + column_units + square_units + left_diagonal_units + right_diagonal_units
 
 # Must be called after all units (including diagonals) are added to the unitlist
 units = extract_units(unitlist, boxes)
@@ -43,31 +41,36 @@ def naked_twins(values):
     and because it is simpler (since the reduce_puzzle function already calls this
     strategy repeatedly).
     """
-    for unit in unitlist:
-        for digit in '123456789':
-            dplaces = [box for box in unit if digit in values[box]]
-            if len(dplaces) == 1:
-                values[dplaces[0]] = digit
-    return values
-
-    # Select boxes with 2 entries for each units
+    # Collect boxes with only 2 elements
     potential_twins = [box for box in values.keys() if len(values[box]) == 2]
-    # Collect boxes that have the same elements from its peers
+    # Extract nake twin pairs 
     naked_twins = [] 
     for box1 in potential_twins:
         for box2 in peers[box1]:
             if set(values[box1])==set(values[box2]): 
-                naked_twins([box1, box2])
+                naked_twins.append([box1, box2])
 
+    # Remove the elements, which show in box1 and box2, from their union peers
     for box1, box2 in naked_twins:
-        # Extract all peers of the twins
-        common_peers = set(peers[box1]).add(peers[box2])
-        # Delete the two digits in naked twins from all common peers.
+        # Extract all peers of the twin pairs
+        common_peers = set(peers[box1]) & set(peers[box2])
+        # Delete the two digits in naked twins from all union peers.
         for peer in common_peers:
             if len(values[peer])>2:
-                for rm_val in values[box1]:
-                    values = assign_value(values, peer, values[peer].replace(rm_val,''))
+                for value in values[box1]:
+                    values = assign_value(values, peer, values[peer].replace(value,''))
     return values
+
+    # # Select boxes with 2 entries for each units
+    # potential_twins = [box for box in values.keys() if len(values[box]) == 2]
+    # # Collect boxes that have the same elements from its peers
+    # naked_twins = [] 
+    # for box1 in potential_twins:
+    #     for box2 in peers[box1]:
+    #         if set(values[box1])==set(values[box2]): 
+    #             naked_twins([box1, box2])
+
+
 
 
 def eliminate(values):
@@ -202,12 +205,20 @@ def solve(grid):
 
 if __name__ == "__main__":
     diag_sudoku_grid = '2.............62....1....7...6..8...3...9...7...6..4...4....8....52.............3'
-    display(grid2values(diag_sudoku_grid))
+    # display(grid2values(diag_sudoku_grid))
     result = solve(diag_sudoku_grid)
     display(result)
 
     try:
         import PySudoku
+
+        # print ("diag_sudoku_grid: ")
+        # print (grid2values(diag_sudoku_grid))
+        # print ("result: ")
+        # print (result)
+        # print ("history: ")
+        # print (history)
+
         PySudoku.play(grid2values(diag_sudoku_grid), result, history)
 
     except SystemExit:
