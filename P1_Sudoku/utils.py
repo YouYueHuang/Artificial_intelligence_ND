@@ -94,9 +94,9 @@ def assign_value(values, box, value):
 
     prev = values2grid(values)
     values[box] = value
-    print (value)
+    # print (value)
     if len(value) == 1:
-        print ("history")
+        # print ("history")
         history[values2grid(values)] = (prev, (box, value))
     return values
 

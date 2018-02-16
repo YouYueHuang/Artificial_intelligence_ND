@@ -1,4 +1,4 @@
-# Solve Sudoku with AI
+# Solve Sudoku with Artificail Intelligence
 
 ## Synopsis
 

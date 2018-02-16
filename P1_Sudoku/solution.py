@@ -57,21 +57,9 @@ def naked_twins(values):
         # Delete the two digits in naked twins from all union peers.
         for peer in common_peers:
             if len(values[peer])>2:
-                for value in values[box1]:
-                    values = assign_value(values, peer, values[peer].replace(value,''))
+                for digit in values[box1]:
+                    values = assign_value(values, peer, values[peer].replace(digit,''))
     return values
-
-    # # Select boxes with 2 entries for each units
-    # potential_twins = [box for box in values.keys() if len(values[box]) == 2]
-    # # Collect boxes that have the same elements from its peers
-    # naked_twins = [] 
-    # for box1 in potential_twins:
-    #     for box2 in peers[box1]:
-    #         if set(values[box1])==set(values[box2]): 
-    #             naked_twins([box1, box2])
-
-
-
 
 def eliminate(values):
     """Apply the eliminate strategy to a Sudoku puzzle
@@ -93,7 +81,7 @@ def eliminate(values):
     for box in solved_values:
         digit = values[box]
         for peer in peers[box]:
-            values[peer] = values[peer].replace(digit,'')
+            values = assign_value(values, peer, values[peer].replace(digit,''))
     return values
 
 
@@ -117,7 +105,8 @@ def only_choice(values):
         for digit in '123456789':
             dplaces = [box for box in unit if digit in values[box]]
             if len(dplaces) == 1:
-                values[dplaces[0]] = digit
+                # values[dplaces[0]] = digit
+                values = assign_value(values, dplaces[0], digit)
     return values
 
 
@@ -139,8 +128,11 @@ def reduce_puzzle(values):
     stalled = False
     while not stalled:
         solved_values_before = len([box for box in values.keys() if len(values[box]) == 1])
+        # applied strategies
         values = eliminate(values)
         values = only_choice(values)
+        values = naked_twins(values)
+
         solved_values_after = len([box for box in values.keys() if len(values[box]) == 1])
         stalled = solved_values_before == solved_values_after
         if len([box for box in values.keys() if len(values[box]) == 0]):
@@ -177,7 +169,8 @@ def search(values):
     # Use recurrence to solve each one of the resulting sudokus (DFS)
     for value in values[s]:
         new_sudoku = values.copy() # Always use copied sudoku to search solution
-        new_sudoku[s] = value
+        new_sudoku = assign_value(new_sudoku, s, value)
+        # new_sudoku[s] = value
         attempt = search(new_sudoku)
         if attempt:
             return attempt
@@ -211,14 +204,6 @@ if __name__ == "__main__":
 
     try:
         import PySudoku
-
-        # print ("diag_sudoku_grid: ")
-        # print (grid2values(diag_sudoku_grid))
-        # print ("result: ")
-        # print (result)
-        # print ("history: ")
-        # print (history)
-
         PySudoku.play(grid2values(diag_sudoku_grid), result, history)
 
     except SystemExit:

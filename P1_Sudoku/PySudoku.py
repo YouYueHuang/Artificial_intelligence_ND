@@ -7,7 +7,6 @@ from GameResources import *
 
 def play(values, result, history):
     assignments = reconstruct(result, history)
-    print (assignments)
     pygame.init()
 
     size = width, height = 700, 700
