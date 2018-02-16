@@ -73,7 +73,7 @@ def extract_peers(units, boxes):
 
 
 def assign_value(values, box, value):
-    """You must use this function to update your values dictionary if you want to
+    """Use this function to update your values dictionary if you want to
     try using the provided visualization tool. This function records each assignment
     (in order) for later reconstruction.
     This function is for (1)naked_twin value updating (2) visualization tool

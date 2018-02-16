@@ -1,6 +1,7 @@
 # Sudoku Solver 
 
-<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/Initial_state.PNG" alt="Overview" width="45%" height="275px"></a><a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/sudoku_solver.gif" alt="Overview" width="45%" height="275px"></a>
+<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/Initial_state.PNG" alt="Overview" width="45%" height="320px"></a>
+<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/sudoku_solver.gif" alt="Overview" width="45%" height="320px"></a>
 
 ## Overview
 

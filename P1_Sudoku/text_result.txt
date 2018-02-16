@@ -1,0 +1,51 @@
+Submission includes the following files:
+    solution.py
+    README.md
+
+Uploading submission...
+[=========================== 48%                             ] 8192/16926[=========================== 96%  ===========================] 16384/16926[=========================== 100% ===========================] 16926/16926[=========================== 100% ===========================] 16926/16926
+
+Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results... |Waiting for results... /Waiting for results... -Waiting for results... \Waiting for results...Done!
+
+Results:
+--------
+
+************************************************************************
+                         Test Failure Feedback                          
+************************************************************************
+
+Failed Test: 1. The naked_twins method applies the 'naked twins' strategy
+------------------------------------------------------------------------
+AttributeError: 'NoneType' object has no attribute 'copy'
+
+Your code completed 0 test cases. The last test case executed was:
+{"D5": "1356789", "G4": "23678", "B4": "46", "E2": "123568", "E9": "12345678", "F1": "123689", "G8": "1234567", "A7": "2346", "F8": "1234569", "H9": "2345678", "B9": "9", "F2": "7", "A1": "2468", "B6": "1", "E3": "25689", "E4": "234678", "D6": "23568", "I6": "4", "C2": "68", "F6": "23568", "I8": "123567", "C3": "4678", "A8": "2346", "A9": "2346", "A6": "7", "I9": "1235678", "F9": "1234568", "F4": "23468", "H6": "23568", "D2": "4", "B3": "3", "D8": "1235679", "H2": "23568", "I4": "23678", "B7": "7", "D3": "25689", "E6": "23568", "I2": "123568", "H4": "1", "D1": "123689", "C4": "9", "H5": "35678", "E5": "13456789", "D4": "23678", "D9": "1235678", "G6": "9", "A3": "1", "C7": "13456", "A5": "3468", "H8": "234567", "C9": "13456", "H3": "2456789", "I7": "9", "H1": "2346789", "G3": "245678", "G1": "1234678", "B2": "2", "E1": "123689", "C6": "368", "C5": "2", "G2": "123568", "I5": "35678", "F5": "1345689", "B8": "8", "F3": "25689", "F7": "1234568", "C1": "4678", "G5": "35678", "I3": "25678", "G9": "12345678", "G7": "1234568", "E8": "12345679", "I1": "123678", "A4": "5", "A2": "9", "E7": "1234568", "B5": "46", "D7": "123568", "B1": "5", "H7": "234568", "C8": "13456"}
+
+************************************************************************
+                          Test Result Summary                           
+************************************************************************
+
+1. The naked_twins method applies the 'naked twins' strategy:          E
+2. The solve method produces a valid solution:                         .
+
+------------------------------------------------------------------------
+  . - Test Passed    F - Test Failed    E - Error    S - Test Skipped   
+
+      Please correct the issue(s) shown and resubmit your project.      
+
+If you need help, please visit the discussion forums, the Slack channel
+for this project, or attend one of the weekly instructor office hours
+sessions. Send an email to ai-support@udacity.com if you need access to
+these communities.
+
+Forums: https://discussions.udacity.com/
+Slack: https://ai-nd.slack.com (channel #p-sudoku)
+Office Hours: https://goo.gl/42FfMK (channel #office-hours)
+
+
+
+Details are available in sudoku-result-208696.json.
+
+If you would like this version of the project to be reviewed,
+submit sudoku-208696.zip to the reviews website.
+

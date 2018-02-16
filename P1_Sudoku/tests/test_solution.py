@@ -8,6 +8,7 @@ import solution
 
 
 class TestNakedTwins(unittest.TestCase):
+
     before_naked_twins_1 = {'I6': '4', 'H9': '3', 'I2': '6', 'E8': '1', 'H3': '5', 'H7': '8', 'I7': '1', 'I4': '8',
                             'H5': '6', 'F9': '7', 'G7': '6', 'G6': '3', 'G5': '2', 'E1': '8', 'G3': '1', 'G2': '8',
                             'G1': '7', 'I1': '23', 'C8': '5', 'I3': '23', 'E5': '347', 'I5': '5', 'C9': '1', 'G9': '5',
@@ -72,14 +73,17 @@ class TestNakedTwins(unittest.TestCase):
          'I3': '5', 'I4': '7', 'I5': '2', 'I6': '6', 'I7': '1', 'I8': '4', 'I9': '8'}
     ]
 
+
     def test_naked_twins(self):
         
         self.assertTrue(solution.naked_twins(self.before_naked_twins_1) in self.possible_solutions_1,
                         "Your naked_twins function produced an unexpected board.")
+        print ("first one" if self.before_naked_twins_1==self.possible_solutions_1[0] else "second one" )
 
     def test_naked_twins2(self):
         self.assertTrue(solution.naked_twins(self.before_naked_twins_2) in self.possible_solutions_2,
                         "Your naked_twins function produced an unexpected board.")
+        print ("first one" if self.before_naked_twins_2==self.possible_solutions_2[0] else "second one" )
 
 
 
