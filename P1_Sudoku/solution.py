@@ -1,6 +1,7 @@
 
 from utils import *
 
+vis_solver = True # True: turn on searching procedure, False: Turn off
 
 left_diagonal_units = [["{}{}".format(r, c) for r, c in zip(rows, cols)]]
 right_diagonal_units = [["{}{}".format(r, c) for r, c in zip(rows, cols[::-1])]]
@@ -203,8 +204,17 @@ if __name__ == "__main__":
     display(result)
 
     try:
+        
         import PySudoku
-        PySudoku.play(grid2values(diag_sudoku_grid), result, history)
+        
+        if not vis_solver:
+            # show initial state
+            history = {}
+            PySudoku.play(grid2values(diag_sudoku_grid), result, history)
+        
+        else:
+            # demo solver history
+            PySudoku.play(grid2values(diag_sudoku_grid), result, history)
 
     except SystemExit:
         pass
