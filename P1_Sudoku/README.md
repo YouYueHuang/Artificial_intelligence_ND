@@ -1,8 +1,6 @@
-# Solve Sudoku with Artificail Intelligence
+# Sudoku Solver 
 
-<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/Initial_state.PNG" alt="Overview" width="45%" height="275px"></a>
-
-<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/sudoku_solver.gif" alt="Overview" width="45%" height="275px"></a>
+<a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/Initial_state.PNG" alt="Overview" width="45%" height="275px"></a><a href="https://youtu.be/jCOnO2_pkOA"><img src="./images/sudoku_solver.gif" alt="Overview" width="45%" height="275px"></a>
 
 ## Overview
 
@@ -35,7 +33,7 @@ In this project, Sudoku-solving agent was developed to solve _diagonal_ Sudoku p
 Define the input and output of your test cases in `tests/test_solution.py` 
 ```python
 class Test_your_strategy(unittest.TestCase):
-	"""
+"""
     test_case_before_applying_strategy = {'I6': '4', 'H9': '3, ..., D4': '237', 'D5': '347'}
     possible_solutions = [
         {'G7': '6', 'G6': '3'..., 'D3': '79', 'D1': '5'},   # solution 1
@@ -45,7 +43,7 @@ class Test_your_strategy(unittest.TestCase):
     def test_your_strategy(self):    
         self.assertTrue(solution.your_strategy_in_solution_py(self.test_case_before_applying_strategy) in self.possible_solutions,
                         "Your strategy function produced an unexpected board.")
-	"""
+"""
 
 Define your strategy in `solution.py`
 ```python
