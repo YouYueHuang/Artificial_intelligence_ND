@@ -138,14 +138,3 @@ Once your project has been reviewed and accepted by meeting all requirements of 
 The competition agent can be submitted using the Udacity project assistant:
 
     udacity submit isolation-pvp
-
-## Use windows directory address bar to open anaconda prompt
-
-get the location of your anaconda prompt
-
-
-%windir%\System32\cmd.exe "/K" D:\Anaconda_36\Scripts\activate.bat D:\Anaconda_36
-
-## Resources
-
-[Visualization of DFS and DFID](http://movingai.com/dfid.html)

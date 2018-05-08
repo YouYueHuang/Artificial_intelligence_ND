@@ -136,3 +136,7 @@ This will run all the `test*.py` modules inside the `test` package.
 
 1. To open the Command Prompt directly at the folder you are interested in, type `cmd` in the address bar of Windows File Explorer and press Enter , 
 2. type: `tree /a /f > output.txt`
+
+## Resource
+
+[Solving Every Sudoku Puzzle](http://norvig.com/sudoku.html)
